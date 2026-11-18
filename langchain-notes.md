@@ -50,4 +50,4 @@ using the combo of .invoke() and .batch()
 
 ### Final engineering verdict
 
-[TODO: when would I use LangChain vs. plain Python in a real project, and why]
+langchain cuse it make the coe easier to read for me and using less math staf in it
