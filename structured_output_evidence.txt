@@ -1,0 +1,243 @@
+======================================================================
+1) RUNNABLE BUILT BY llm.with_structured_output(SupportTicket)
+======================================================================
+steps         : ['_ChatModelBinding', 'PydanticToolsParser']
+steps[0].bound: ChatGroq
+output parser : PydanticToolsParser
+
+======================================================================
+2) KWARGS BOUND TO THE MODEL (sent with every request): structured_llm.steps[0].kwargs
+======================================================================
+{
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "SupportTicket",
+        "description": "Structured information extracted from one NovaTech customer support message.",
+        "parameters": {
+          "properties": {
+            "customer_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Customer's name as signed in the message, written in Latin script (transliterate Arabic names). null if no name is given."
+            },
+            "order_ids": {
+              "description": "All order numbers mentioned, normalised to the form 'NT-12345' (e.g. 'nt 10465', '#10465' and '10465' all become 'NT-10465'). Empty list if none.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "product": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Product(s) the message is about, in English, as named by the customer (e.g. 'Samsung Galaxy A55'). Several products: comma-separated. null if no product is mentioned."
+            },
+            "issue_type": {
+              "description": "damaged_item = arrived physically damaged/broken; defective = does not work / malfunctions / safety fault; wrong_item = different item than ordered, or not as advertised; late_delivery = late, not arrived, or stuck in processing; refund_request = wants money back with no fault (change of mind); billing = wrong amount or duplicate charge; cancellation = wants to cancel an order; other = questions, feedback, compliments, account/data requests.",
+              "enum": [
+                "damaged_item",
+                "defective",
+                "wrong_item",
+                "late_delivery",
+                "refund_request",
+                "billing",
+                "cancellation",
+                "other"
+              ],
+              "type": "string"
+            },
+            "wants_refund": {
+              "description": "True only if the customer explicitly asks for money back (full refund, refund of a charge or price difference). False for replacements, exchanges, repairs or questions.",
+              "type": "boolean"
+            },
+            "urgency": {
+              "description": "high = threats (complaint, bank dispute, deadline), safety hazards, repeated unanswered contacts, or explicitly marked urgent; low = questions, compliments, no problem to fix; medium = everything else.",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            "language": {
+              "description": "en = English, ar = Arabic script, mixed = Arabic written in Latin letters (Arabizi) or a mix of languages.",
+              "enum": [
+                "en",
+                "ar",
+                "mixed"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "issue_type",
+            "wants_refund",
+            "urgency",
+            "language"
+          ],
+          "type": "object"
+        }
+      }
+    }
+  ],
+  "ls_structured_output_format": {
+    "kwargs": {
+      "method": "function_calling"
+    },
+    "schema": {
+      "type": "function",
+      "function": {
+        "name": "SupportTicket",
+        "description": "Structured information extracted from one NovaTech customer support message.",
+        "parameters": {
+          "properties": {
+            "customer_name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Customer's name as signed in the message, written in Latin script (transliterate Arabic names). null if no name is given."
+            },
+            "order_ids": {
+              "description": "All order numbers mentioned, normalised to the form 'NT-12345' (e.g. 'nt 10465', '#10465' and '10465' all become 'NT-10465'). Empty list if none.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "product": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Product(s) the message is about, in English, as named by the customer (e.g. 'Samsung Galaxy A55'). Several products: comma-separated. null if no product is mentioned."
+            },
+            "issue_type": {
+              "description": "damaged_item = arrived physically damaged/broken; defective = does not work / malfunctions / safety fault; wrong_item = different item than ordered, or not as advertised; late_delivery = late, not arrived, or stuck in processing; refund_request = wants money back with no fault (change of mind); billing = wrong amount or duplicate charge; cancellation = wants to cancel an order; other = questions, feedback, compliments, account/data requests.",
+              "enum": [
+                "damaged_item",
+                "defective",
+                "wrong_item",
+                "late_delivery",
+                "refund_request",
+                "billing",
+                "cancellation",
+                "other"
+              ],
+              "type": "string"
+            },
+            "wants_refund": {
+              "description": "True only if the customer explicitly asks for money back (full refund, refund of a charge or price difference). False for replacements, exchanges, repairs or questions.",
+              "type": "boolean"
+            },
+            "urgency": {
+              "description": "high = threats (complaint, bank dispute, deadline), safety hazards, repeated unanswered contacts, or explicitly marked urgent; low = questions, compliments, no problem to fix; medium = everything else.",
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ],
+              "type": "string"
+            },
+            "language": {
+              "description": "en = English, ar = Arabic script, mixed = Arabic written in Latin letters (Arabizi) or a mix of languages.",
+              "enum": [
+                "en",
+                "ar",
+                "mixed"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "issue_type",
+            "wants_refund",
+            "urgency",
+            "language"
+          ],
+          "type": "object"
+        }
+      }
+    }
+  },
+  "tool_choice": {
+    "type": "function",
+    "function": {
+      "name": "SupportTicket"
+    }
+  }
+}
+
+======================================================================
+3) RAW MODEL RESPONSE (include_raw=True) for M04
+======================================================================
+Input text: the charger that came with my lenovo ideapad (order nt 10465) gets super hot and last night it smelled like burning plastic. im scared to use it now. Rami
+
+AIMessage.content (empty - the answer is in a tool call): ''
+
+AIMessage.additional_kwargs['tool_calls'] (wire format, arguments = JSON string):
+[
+  {
+    "id": "fc_5654451e-8f55-4fa1-b2d3-6468eee42bcf",
+    "function": {
+      "arguments": "{\"customer_name\":\"Rami\",\"issue_type\":\"defective\",\"language\":\"en\",\"order_ids\":[\"NT-10465\"],\"product\":\"Lenovo Ideapad charger\",\"urgency\":\"high\",\"wants_refund\":false}",
+      "name": "SupportTicket"
+    },
+    "type": "function"
+  }
+]
+
+AIMessage.tool_calls (LangChain-parsed, before Pydantic):
+[
+  {
+    "name": "SupportTicket",
+    "args": {
+      "customer_name": "Rami",
+      "issue_type": "defective",
+      "language": "en",
+      "order_ids": [
+        "NT-10465"
+      ],
+      "product": "Lenovo Ideapad charger",
+      "urgency": "high",
+      "wants_refund": false
+    },
+    "id": "fc_5654451e-8f55-4fa1-b2d3-6468eee42bcf",
+    "type": "tool_call"
+  }
+]
+
+finish_reason: tool_calls
+token usage  : {'input_tokens': 662, 'output_tokens': 271, 'total_tokens': 933, 'input_token_details': {'cache_read': 512}, 'output_token_details': {'reasoning': 186}}
+
+======================================================================
+4) AFTER PYDANTIC PARSING
+======================================================================
+parsing_error: None
+parsed       : SupportTicket(customer_name='Rami', order_ids=['NT-10465'], product='Lenovo Ideapad charger', issue_type='defective', wants_refund=False, urgency='high', language='en')

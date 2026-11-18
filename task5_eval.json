@@ -1,0 +1,19 @@
+{
+  "_comment": "Questions, ground truth and best chunk size from Task 5 (task5-rag/rag.py + rag-notes.md). Expected sources use the REAL filenames in novatech_docs/ (Task 5 listed non-existent names like returns_policy_v2.0.md). [] = not answerable from the docs, excluded from hit@3.",
+  "best_chunk_size": 500,
+  "best_chunk_overlap": 50,
+  "questions": [
+    {"id": "Q01", "question": "How long is the warranty on a TV?", "expected_sources": ["warranty.md"]},
+    {"id": "Q02", "question": "How many days do I have to return a product?", "expected_sources": ["returns_policy.md"]},
+    {"id": "Q03", "question": "I paid by bank transfer. How long until I get my money back after I return an item?", "expected_sources": ["refunds.md"]},
+    {"id": "Q04", "question": "Do you deliver to Kuwait?", "expected_sources": ["shipping_and_delivery.md"]},
+    {"id": "Q05", "question": "Can I return earbuds I opened if they work fine?", "expected_sources": ["returns_policy.md"]},
+    {"id": "Q06", "question": "My order arrived broken. What should I do?", "expected_sources": ["damaged_or_wrong_items.md"]},
+    {"id": "Q07", "question": "How much is delivery to Irbid for a 40 JOD order, and how long does it take?", "expected_sources": ["shipping_and_delivery.md"]},
+    {"id": "Q08", "question": "Who is the CEO of NovaTech?", "expected_sources": []},
+    {"id": "Q09", "question": "Is my laptop battery covered for 2 years?", "expected_sources": ["warranty.md"]},
+    {"id": "Q10", "question": "Do you offer a student discount?", "expected_sources": []},
+    {"id": "Q11", "question": "Is the Irbid store open on Friday?", "expected_sources": ["stores_and_service_center.md"]},
+    {"id": "Q12", "question": "I'm a Gold member. I bought headphones 40 days ago and never opened them. Can I return them?", "expected_sources": ["novapoints_loyalty.md", "returns_policy.md"]}
+  ]
+}

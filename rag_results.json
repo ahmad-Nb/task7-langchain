@@ -1,0 +1,378 @@
+[
+  {
+    "name": "LangChain default",
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "num_chunks": 17,
+    "hits": 10,
+    "scored": 10,
+    "hit@3": 1.0,
+    "results": [
+      {
+        "id": "Q01",
+        "question": "How long is the warranty on a TV?",
+        "expected_sources": [
+          "warranty.md"
+        ],
+        "retrieved_sources": [
+          "warranty.md",
+          "warranty.md",
+          "damaged_or_wrong_items.md"
+        ],
+        "hit@3": true,
+        "answer": "The warranty for TVs is **24 months** from the delivery date. (Source: warranty.md)",
+        "correct": null
+      },
+      {
+        "id": "Q02",
+        "question": "How many days do I have to return a product?",
+        "expected_sources": [
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy_v1.3.md",
+          "returns_policy.md",
+          "damaged_or_wrong_items.md"
+        ],
+        "hit@3": true,
+        "answer": "You have **14 days** from the date of purchase to return a product. (Source: returns_policy_v1.3.md)",
+        "correct": null
+      },
+      {
+        "id": "Q03",
+        "question": "I paid by bank transfer. How long until I get my money back after I return an item?",
+        "expected_sources": [
+          "refunds.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "refunds.md",
+          "returns_policy_v1.3.md"
+        ],
+        "hit@3": true,
+        "answer": "If you paid by bank transfer, the refund will be sent to the same bank account within **7–10 business days after the return is approved** (i.e., after the item has been inspected). (Source: refunds.md)",
+        "correct": null
+      },
+      {
+        "id": "Q04",
+        "question": "Do you deliver to Kuwait?",
+        "expected_sources": [
+          "shipping_and_delivery.md"
+        ],
+        "retrieved_sources": [
+          "shipping_and_delivery.md",
+          "faq.md",
+          "stores_and_service_center.md"
+        ],
+        "hit@3": true,
+        "answer": "No. NovaTech delivers **within Jordan only** and does not ship internationally. (Source: shipping_and_delivery.md)",
+        "correct": null
+      },
+      {
+        "id": "Q05",
+        "question": "Can I return earbuds I opened if they work fine?",
+        "expected_sources": [
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "refunds.md"
+        ],
+        "hit@3": true,
+        "answer": "No. Once the hygiene seal on in‑ear headphones or earbuds is broken, they cannot be returned unless they are defective. (Source: returns_policy.md; also confirmed by returns_policy_v1.3.md).",
+        "correct": null
+      },
+      {
+        "id": "Q06",
+        "question": "My order arrived broken. What should I do?",
+        "expected_sources": [
+          "damaged_or_wrong_items.md"
+        ],
+        "retrieved_sources": [
+          "damaged_or_wrong_items.md",
+          "warranty.md",
+          "faq.md"
+        ],
+        "hit@3": true,
+        "answer": "If your order arrived broken, you need to report the problem within **48 hours of delivery**.  \n\n1. Open **“My Orders” → “Report a problem”** (or call customer service).  \n2. Provide:  \n   - Your order number  \n   - Clear photos of the broken item and its packaging  \n\nAfter you report it, NovaTech will:  \n\n1. Arrange a free courier pickup within **2 business days**.  \n2. Let you choose a **replacement** or a **full refund** (including any delivery fee).  \n3. Ship the replacement as soon as the pickup is completed.  \n\n(Source: damaged_or_wrong_items.md)",
+        "correct": null
+      },
+      {
+        "id": "Q07",
+        "question": "How much is delivery to Irbid for a 40 JOD order, and how long does it take?",
+        "expected_sources": [
+          "shipping_and_delivery.md"
+        ],
+        "retrieved_sources": [
+          "shipping_and_delivery.md",
+          "damaged_or_wrong_items.md",
+          "faq.md"
+        ],
+        "hit@3": true,
+        "answer": "The delivery fee for a 40 JOD order to Irbid is **5 JOD**, and the standard delivery time is **2–3 business days**. (Source: shipping_and_delivery.md)",
+        "correct": null
+      },
+      {
+        "id": "Q08",
+        "question": "Who is the CEO of NovaTech?",
+        "expected_sources": [],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "warranty.md"
+        ],
+        "hit@3": null,
+        "answer": "The provided documents do not contain the answer to this question.",
+        "correct": null
+      },
+      {
+        "id": "Q09",
+        "question": "Is my laptop battery covered for 2 years?",
+        "expected_sources": [
+          "warranty.md"
+        ],
+        "retrieved_sources": [
+          "warranty.md",
+          "warranty.md",
+          "gift_cards.md"
+        ],
+        "hit@3": true,
+        "answer": "No. Built‑in laptop batteries are covered for **12 months only**, even though the laptop itself has a 24‑month warranty. (Source: warranty.md)",
+        "correct": null
+      },
+      {
+        "id": "Q10",
+        "question": "Do you offer a student discount?",
+        "expected_sources": [],
+        "retrieved_sources": [
+          "novapoints_loyalty.md",
+          "returns_policy.md",
+          "price_match.md"
+        ],
+        "hit@3": null,
+        "answer": "The provided documents do not contain the answer to this question.",
+        "correct": null
+      },
+      {
+        "id": "Q11",
+        "question": "Is the Irbid store open on Friday?",
+        "expected_sources": [
+          "stores_and_service_center.md"
+        ],
+        "retrieved_sources": [
+          "stores_and_service_center.md",
+          "faq.md",
+          "returns_policy_v1.3.md"
+        ],
+        "hit@3": true,
+        "answer": "No. The Irbid store is closed on Friday. (Source: stores_and_service_center.md)",
+        "correct": null
+      },
+      {
+        "id": "Q12",
+        "question": "I'm a Gold member. I bought headphones 40 days ago and never opened them. Can I return them?",
+        "expected_sources": [
+          "novapoints_loyalty.md",
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "refunds.md"
+        ],
+        "hit@3": true,
+        "answer": "No. NovaTech’s Returns Policy (Version 1.3) allows products to be returned only **within 14 days of purchase** (returns_policy_v1.3.md). Since you bought the headphones 40 days ago, the return window has passed, so the items cannot be returned now.",
+        "correct": null
+      }
+    ]
+  },
+  {
+    "name": "Task 5 best",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "num_chunks": 33,
+    "hits": 10,
+    "scored": 10,
+    "hit@3": 1.0,
+    "results": [
+      {
+        "id": "Q01",
+        "question": "How long is the warranty on a TV?",
+        "expected_sources": [
+          "warranty.md"
+        ],
+        "retrieved_sources": [
+          "warranty.md",
+          "warranty.md",
+          "warranty.md"
+        ],
+        "hit@3": true,
+        "answer": "The warranty for a TV is **24 months**. (Source: warranty.md)",
+        "correct": null
+      },
+      {
+        "id": "Q02",
+        "question": "How many days do I have to return a product?",
+        "expected_sources": [
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "returns_policy.md"
+        ],
+        "hit@3": true,
+        "answer": "You have **30 days from the delivery date** to return most products. (Source: returns_policy.md)",
+        "correct": null
+      },
+      {
+        "id": "Q03",
+        "question": "I paid by bank transfer. How long until I get my money back after I return an item?",
+        "expected_sources": [
+          "refunds.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "refunds.md",
+          "refunds.md"
+        ],
+        "hit@3": true,
+        "answer": "The provided documents do not contain the answer to this question. (Source: refunds.md)",
+        "correct": null
+      },
+      {
+        "id": "Q04",
+        "question": "Do you deliver to Kuwait?",
+        "expected_sources": [
+          "shipping_and_delivery.md"
+        ],
+        "retrieved_sources": [
+          "shipping_and_delivery.md",
+          "shipping_and_delivery.md",
+          "returns_policy_v1.3.md"
+        ],
+        "hit@3": true,
+        "answer": "No. NovaTech delivers **within Jordan only** and does not ship internationally. (Source: shipping_and_delivery.md)",
+        "correct": null
+      },
+      {
+        "id": "Q05",
+        "question": "Can I return earbuds I opened if they work fine?",
+        "expected_sources": [
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "returns_policy.md"
+        ],
+        "hit@3": true,
+        "answer": "No. Opened earbuds cannot be returned unless they are defective. Both the general policy and the current version of the returns policy list earbuds as non‑returnable once the hygiene seal is broken or the item is opened. (Source: returns_policy.md; returns_policy_v1.3.md)",
+        "correct": null
+      },
+      {
+        "id": "Q06",
+        "question": "My order arrived broken. What should I do?",
+        "expected_sources": [
+          "damaged_or_wrong_items.md"
+        ],
+        "retrieved_sources": [
+          "damaged_or_wrong_items.md",
+          "returns_policy_v1.3.md",
+          "warranty.md"
+        ],
+        "hit@3": true,
+        "answer": "Report the problem within 48 hours of delivery. Use **“My Orders” → “Report a problem”** in the app or call customer service. Include:\n\n- Your order number  \n- Clear photos of the damaged item and its packaging (and a photo of the label if it’s the wrong item)\n\n(Source: damaged_or_wrong_items.md)",
+        "correct": null
+      },
+      {
+        "id": "Q07",
+        "question": "How much is delivery to Irbid for a 40 JOD order, and how long does it take?",
+        "expected_sources": [
+          "shipping_and_delivery.md"
+        ],
+        "retrieved_sources": [
+          "shipping_and_delivery.md",
+          "shipping_and_delivery.md",
+          "damaged_or_wrong_items.md"
+        ],
+        "hit@3": true,
+        "answer": "The delivery fee for a 40 JOD order to Irbid is **5 JOD** (orders under 50 JOD cost 5 JOD outside Amman)【shipping_and_delivery.md】.  \nStandard delivery to Irbid takes **2–3 business days**【shipping_and_delivery.md】.",
+        "correct": null
+      },
+      {
+        "id": "Q08",
+        "question": "Who is the CEO of NovaTech?",
+        "expected_sources": [],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "warranty.md"
+        ],
+        "hit@3": null,
+        "answer": "The provided documents do not contain the answer to this question.",
+        "correct": null
+      },
+      {
+        "id": "Q09",
+        "question": "Is my laptop battery covered for 2 years?",
+        "expected_sources": [
+          "warranty.md"
+        ],
+        "retrieved_sources": [
+          "warranty.md",
+          "returns_policy.md",
+          "warranty.md"
+        ],
+        "hit@3": true,
+        "answer": "No. Built‑in laptop batteries are covered for **12 months only**, even if the laptop itself has a longer warranty. (Source: warranty.md)",
+        "correct": null
+      },
+      {
+        "id": "Q10",
+        "question": "Do you offer a student discount?",
+        "expected_sources": [],
+        "retrieved_sources": [
+          "novapoints_loyalty.md",
+          "novapoints_loyalty.md",
+          "returns_policy.md"
+        ],
+        "hit@3": null,
+        "answer": "The provided documents do not contain the answer to this question.",
+        "correct": null
+      },
+      {
+        "id": "Q11",
+        "question": "Is the Irbid store open on Friday?",
+        "expected_sources": [
+          "stores_and_service_center.md"
+        ],
+        "retrieved_sources": [
+          "stores_and_service_center.md",
+          "faq.md",
+          "stores_and_service_center.md"
+        ],
+        "hit@3": true,
+        "answer": "No. The Irbid store is closed on Friday. (Source: stores_and_service_center.md)",
+        "correct": null
+      },
+      {
+        "id": "Q12",
+        "question": "I'm a Gold member. I bought headphones 40 days ago and never opened them. Can I return them?",
+        "expected_sources": [
+          "novapoints_loyalty.md",
+          "returns_policy.md"
+        ],
+        "retrieved_sources": [
+          "returns_policy.md",
+          "returns_policy_v1.3.md",
+          "returns_policy.md"
+        ],
+        "hit@3": true,
+        "answer": "No. NovaTech’s returns policy allows products to be returned only within **14 days of purchase** (returns_policy_v1.3.md). Since your headphones were bought **40 days ago**, the return window has passed, so they cannot be returned.",
+        "correct": null
+      }
+    ]
+  }
+]
